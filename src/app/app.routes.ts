@@ -1,3 +1,12 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { HomeComponent } from './pages/home/home.component';
+import { ApiDataComponent } from './pages/api-data/api-data.component';
+import { FormComponent } from './pages/form/form.component';
+
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'api-data', component: ApiDataComponent },
+  { path: 'form', component: FormComponent },
+  { path: '**', redirectTo: '' } 
+];
